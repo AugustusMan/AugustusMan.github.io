@@ -87,16 +87,19 @@
 
 
 
-<meta name="description" content="莫等闲,白了少年头">
-<meta property="og:type" content="website">
-<meta property="og:title" content="win32 程序开发流程">
-<meta property="og:url" content="https://wang-yulong.github.io/win32-程序开发流程/index.html">
+<meta name="description" content="Invoke MSDN的解释  在拥有此控件的基础窗口句柄的线程上执行指定的委托  自我理解  （1）同步的，必须得等委托内的代码执行完成之后才能执行   BeginInvoke MSDN的解释  在创建控件的基础句柄所在线程上异步执行指定委托。  自我理解  （1）异步的，不一定非得等委托内的代码运行结束才执行   个人实例   如图所示，创建一个父窗口，在父窗口中点击按钮弹出一个新的子窗口Fo">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="c# invoke和BeginInvoke 细节收录">
+<meta property="og:url" content="https://wang-yulong.github.io/2017/05/05/c-invoke和BeginInvoke-细节收录/index.html">
 <meta property="og:site_name" content="一人静在书中">
-<meta property="og:description" content="莫等闲,白了少年头">
-<meta property="og:updated_time" content="2017-04-28T04:46:09.364Z">
+<meta property="og:description" content="Invoke MSDN的解释  在拥有此控件的基础窗口句柄的线程上执行指定的委托  自我理解  （1）同步的，必须得等委托内的代码执行完成之后才能执行   BeginInvoke MSDN的解释  在创建控件的基础句柄所在线程上异步执行指定委托。  自我理解  （1）异步的，不一定非得等委托内的代码运行结束才执行   个人实例   如图所示，创建一个父窗口，在父窗口中点击按钮弹出一个新的子窗口Fo">
+<meta property="og:image" content="https://wang-yulong.github.io/2017/05/05/c-invoke和BeginInvoke-细节收录/img/invoke.png">
+<meta property="og:updated_time" content="2017-05-05T12:54:02.858Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="win32 程序开发流程">
-<meta name="twitter:description" content="莫等闲,白了少年头">
+<meta name="twitter:title" content="c# invoke和BeginInvoke 细节收录">
+<meta name="twitter:description" content="Invoke MSDN的解释  在拥有此控件的基础窗口句柄的线程上执行指定的委托  自我理解  （1）同步的，必须得等委托内的代码执行完成之后才能执行   BeginInvoke MSDN的解释  在创建控件的基础句柄所在线程上异步执行指定委托。  自我理解  （1）异步的，不一定非得等委托内的代码运行结束才执行   个人实例   如图所示，创建一个父窗口，在父窗口中点击按钮弹出一个新的子窗口Fo">
+<meta name="twitter:image" content="https://wang-yulong.github.io/2017/05/05/c-invoke和BeginInvoke-细节收录/img/invoke.png">
 
 
 
@@ -124,19 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://wang-yulong.github.io/win32-程序开发流程/"/>
+  <link rel="canonical" href="https://wang-yulong.github.io/2017/05/05/c-invoke和BeginInvoke-细节收录/"/>
 
 
 
 
 
-  <title>
-  
-
-  
-    win32 程序开发流程 | 一人静在书中
-  
-</title>
+  <title> c# invoke和BeginInvoke 细节收录 | 一人静在书中 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -161,7 +158,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -306,18 +303,169 @@
             
 
   <div id="posts" class="posts-expand">
-  <header class="post-header">
+    
 
-	<h1 class="post-title" itemprop="name headline">win32 程序开发流程</h1>
+  
 
+  
+  
+  
 
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://wang-yulong.github.io/2017/05/05/c-invoke和BeginInvoke-细节收录/">
 
-</header>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bob">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1492093769&di=6f546b4acf0c68f144fc8ae24f48d832&src=http://pic15.nipic.com/20110630/6322714_105943746342_2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一人静在书中">
+    </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                c# invoke和BeginInvoke 细节收录
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-05T20:34:08+08:00">
+                2017-05-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
-    
+      
+
+      
+        <h1 id="Invoke"><a href="#Invoke" class="headerlink" title="Invoke"></a>Invoke</h1><ol>
+<li><p>MSDN的解释</p>
+<p> 在拥有此控件的基础窗口句柄的线程上执行指定的委托</p>
+</li>
+<li><p>自我理解</p>
+<p> （1）同步的，必须得等委托内的代码执行完成之后才能执行</p>
+</li>
+</ol>
+<h1 id="BeginInvoke"><a href="#BeginInvoke" class="headerlink" title="BeginInvoke"></a>BeginInvoke</h1><ol>
+<li>MSDN的解释</li>
+</ol>
+<pre><code>在创建控件的基础句柄所在线程上异步执行指定委托。
+</code></pre><ol>
+<li><p>自我理解</p>
+<p> （1）异步的，不一定非得等委托内的代码运行结束才执行</p>
+</li>
+</ol>
+<h1 id="个人实例"><a href="#个人实例" class="headerlink" title="个人实例"></a>个人实例</h1><p><img src="img/invoke.png" alt="图片"></p>
+<p>  如图所示，创建一个父窗口，在父窗口中点击按钮弹出一个新的子窗口Form6;</p>
+<p>  在子窗口添加按钮点击的时候执行关闭操作（this.Close），同时用根窗口所在的Form弹出另一个Form;</p>
+<p>  如果使用Invoke会阻止this.Close的执行；</p>
+<p>  如果使用BeginInvoke的话则不会；</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/04/c-按F5不能编译的问题/" rel="prev" title="c#按F5不能编译的问题以及C#平台和目标平台的区别">
+                c#按F5不能编译的问题以及C#平台和目标平台的区别 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -349,8 +497,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1492093769&di=6f546b4acf0c68f144fc8ae24f48d832&src=http://pic15.nipic.com/20110630/6322714_105943746342_2.jpg"
@@ -408,6 +565,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Invoke"><span class="nav-number">1.</span> <span class="nav-text">Invoke</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BeginInvoke"><span class="nav-number">2.</span> <span class="nav-text">BeginInvoke</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#个人实例"><span class="nav-number">3.</span> <span class="nav-text">个人实例</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -529,6 +702,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
