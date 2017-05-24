@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="一人静在书中">
 <meta property="og:description" content="Invoke MSDN的解释  在拥有此控件的基础窗口句柄的线程上执行指定的委托  自我理解  （1）同步的，必须得等委托内的代码执行完成之后才能执行   BeginInvoke MSDN的解释  在创建控件的基础句柄所在线程上异步执行指定委托。  自我理解  （1）异步的，不一定非得等委托内的代码运行结束才执行   个人实例   如图所示，创建一个父窗口，在父窗口中点击按钮弹出一个新的子窗口Fo">
 <meta property="og:image" content="https://wang-yulong.github.io/2017/05/05/c-invoke和BeginInvoke-细节收录/img/invoke.png">
-<meta property="og:updated_time" content="2017-05-05T12:54:02.858Z">
+<meta property="og:updated_time" content="2017-05-24T12:53:21.713Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c# invoke和BeginInvoke 细节收录">
 <meta name="twitter:description" content="Invoke MSDN的解释  在拥有此控件的基础窗口句柄的线程上执行指定的委托  自我理解  （1）同步的，必须得等委托内的代码执行完成之后才能执行   BeginInvoke MSDN的解释  在创建控件的基础句柄所在线程上异步执行指定委托。  自我理解  （1）异步的，不一定非得等委托内的代码运行结束才执行   个人实例   如图所示，创建一个父窗口，在父窗口中点击按钮弹出一个新的子窗口Fo">
@@ -406,7 +406,24 @@
 <p>  在子窗口添加按钮点击的时候执行关闭操作（this.Close），同时用根窗口所在的Form弹出另一个Form;</p>
 <p>  如果使用Invoke会阻止this.Close的执行；</p>
 <p>  如果使用BeginInvoke的话则不会；</p>
+<p>##多线程场景</p>
+<p>###1：Form关闭的时候回到主线程去弹窗（这有这样才可以）</p>
+<pre><code>EventHandler actionDelegate = delegate
+   {
+       _signInAlertForm.Close();
+   };
+   mainTreadForm.BeginInvoke(actionDelegate, &quot;&quot;);//主线程对应的Form
+</code></pre><p> }</p>
+<p>###2：计时器结束的时候想去关掉Form,但是计时器会单独新启动一个线程，此时需要回到创建该控件的线程去执行某个操作(测试这两种都可以)</p>
+<pre><code>EventHandler actionDelegate = delegate
+     {
+         _signInAlertForm.Hide();
+     };
+     this._signInAlertForm.BeginInvoke(actionDelegate, &quot;&quot;);
 
+      this._signInAlertForm.Invoke(actionDelegate, &quot;&quot;);
+ }
+</code></pre>
       
     </div>
 
@@ -441,6 +458,10 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/23/c-测量类/" rel="next" title="c# GDI测量某个点在某个不规则路径上或路径中">
+                <i class="fa fa-chevron-left"></i> c# GDI测量某个点在某个不规则路径上或路径中
+              </a>
             
           </div>
 
@@ -522,7 +543,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
