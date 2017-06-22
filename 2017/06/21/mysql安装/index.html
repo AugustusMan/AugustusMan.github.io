@@ -96,7 +96,7 @@
 <meta property="og:description" content="##1：在官网下载https://dev.mysql.com/downloads/mysql/（如图）  ##2：解压之后，首先在解决的当前目录下添加my.ini文件(内容如下) [client] port=3306 default-character-set=utf8  [mysqld]  # 设置为MYSQL的安装目录  basedir=E:\mysql-5.7.18-winx64 # 设置为">
 <meta property="og:image" content="https://wang-yulong.github.io/img/mysql1.png">
 <meta property="og:image" content="https://wang-yulong.github.io/img/mysql2.png">
-<meta property="og:updated_time" content="2017-06-21T12:35:07.129Z">
+<meta property="og:updated_time" content="2017-06-22T12:27:54.024Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql绿色版安装步骤">
 <meta name="twitter:description" content="##1：在官网下载https://dev.mysql.com/downloads/mysql/（如图）  ##2：解压之后，首先在解决的当前目录下添加my.ini文件(内容如下) [client] port=3306 default-character-set=utf8  [mysqld]  # 设置为MYSQL的安装目录  basedir=E:\mysql-5.7.18-winx64 # 设置为">
@@ -410,6 +410,20 @@ mysqladmin -u root -p password(设置新密码)
 <p><img src="/img/mysql2.png" alt="图片">  </p>
 <pre><code>解决方案：可以使用如何使用DirectX修复工具进行修复
 </code></pre><p>详细可查看 <a href="http://jingyan.baidu.com/article/ed2a5d1f57a1ab09f6be17d8.html" target="_blank" rel="external">http://jingyan.baidu.com/article/ed2a5d1f57a1ab09f6be17d8.html</a></p>
+<pre><code>(3) 部署java web项目到服务器，老是提示“java.sql.SQLException: No suitable driver found for jdbc:mysql”
+
+    1.查了好久发现是,java web项目虽然成功部署了，但是mysql-connector-java-3.1.14-bin.jar并没有复制到
+      “webapps\WeixinCoreServlet\WEB-INF\lib ”该目录下，导包的方式是bulid_path那样导的，虽然导入成功了，
+      但是并不复制，必须手动刷新（右键项目-&gt;刷新(F5)）myelipse 2014下发生的
+
+（4）执行查询报错 Host &apos;XXX&apos; is not allowed to connect to this MySQL server 
+      原因：未授权远程账号
+      解决方案：
+      1.在 Windows 主机中点击开始菜单，运行，输入“cmd”，进入控制台，然后cd 进入MySQL 的 bin 目录下，然后输入下面的命令。
+           mysql -uroot -p123456                 (123456 为 root 用户的密码。)
+      2.创建远程登陆用户并授权
+           grant all PRIVILEGES on test_db.* to root@&apos;192.168.1.101&apos;  identified by &apos;123456&apos;;
+</code></pre><p> 引用：<a href="http://www.cnblogs.com/zhangzhu/archive/2013/08/22/3274831.html" target="_blank" rel="external">http://www.cnblogs.com/zhangzhu/archive/2013/08/22/3274831.html</a></p>
 
       
     </div>
@@ -445,6 +459,10 @@ mysqladmin -u root -p password(设置新密码)
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/22/myeclipse常用快捷键/" rel="next" title="myeclipse常用快捷键">
+                <i class="fa fa-chevron-left"></i> myeclipse常用快捷键
+              </a>
             
           </div>
 
@@ -526,7 +544,7 @@ mysqladmin -u root -p password(设置新密码)
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
