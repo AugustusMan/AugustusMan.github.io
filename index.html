@@ -487,6 +487,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/mysql/" itemprop="url" rel="index">
+                    <span itemprop="name">mysql</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -553,7 +575,14 @@ mysqladmin -u root -p password(设置新密码)
       2.创建远程登陆用户并授权
            grant all PRIVILEGES on test_db.* to root@&apos;192.168.1.101&apos;  identified by &apos;123456&apos;;
 </code></pre><p> 引用：<a href="http://www.cnblogs.com/zhangzhu/archive/2013/08/22/3274831.html" target="_blank" rel="external">http://www.cnblogs.com/zhangzhu/archive/2013/08/22/3274831.html</a></p>
+<pre><code>(5)mysql  运行时报错（如下）
 
+   Establishing SSL connection without server&apos;s identity verification is not recommended.
+   You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+   原因分析：mysql高版本需要指明是否安全连接
+   解决方案：（mysql的连接串改为如下配置）
+   “ jbbcLmysql://localhost:3306/weixin?characterEncoding=utf8&amp;useSSL=true ”
+</code></pre>
           
         
       
@@ -2215,7 +2244,25 @@ int main(void)
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
           
 
         </nav>
