@@ -89,19 +89,19 @@
 
 
 
-<meta name="description" content="##1：在官网下载https://dev.mysql.com/downloads/mysql/（如图）  ##2：解压之后，首先在解决的当前目录下添加my.ini文件(内容如下) [client] port=3306 default-character-set=utf8  [mysqld]  # 设置为MYSQL的安装目录  basedir=E:\mysql-5.7.18-winx64 # 设置为">
+<meta name="description" content="##1:在官网下载https://dev.mysql.com/downloads/mysql/（如图） ##2:解压之后，首先在解决的当前目录下添加my.ini文件(内容如下) [client] port=3306 default-character-set=utf8  [mysqld]  # 设置为MYSQL的安装目录  basedir=E:\mysql-5.7.18-winx64 # 设置为M">
 <meta name="keywords" content="mysql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mysql绿色版安装步骤">
 <meta property="og:url" content="https://wang-yulong.github.io/2017/06/21/mysql安装/index.html">
 <meta property="og:site_name" content="一人静在书中">
-<meta property="og:description" content="##1：在官网下载https://dev.mysql.com/downloads/mysql/（如图）  ##2：解压之后，首先在解决的当前目录下添加my.ini文件(内容如下) [client] port=3306 default-character-set=utf8  [mysqld]  # 设置为MYSQL的安装目录  basedir=E:\mysql-5.7.18-winx64 # 设置为">
+<meta property="og:description" content="##1:在官网下载https://dev.mysql.com/downloads/mysql/（如图） ##2:解压之后，首先在解决的当前目录下添加my.ini文件(内容如下) [client] port=3306 default-character-set=utf8  [mysqld]  # 设置为MYSQL的安装目录  basedir=E:\mysql-5.7.18-winx64 # 设置为M">
 <meta property="og:image" content="https://wang-yulong.github.io/img/mysql1.png">
 <meta property="og:image" content="https://wang-yulong.github.io/img/mysql2.png">
-<meta property="og:updated_time" content="2017-06-23T06:28:39.746Z">
+<meta property="og:updated_time" content="2017-06-25T03:11:41.685Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql绿色版安装步骤">
-<meta name="twitter:description" content="##1：在官网下载https://dev.mysql.com/downloads/mysql/（如图）  ##2：解压之后，首先在解决的当前目录下添加my.ini文件(内容如下) [client] port=3306 default-character-set=utf8  [mysqld]  # 设置为MYSQL的安装目录  basedir=E:\mysql-5.7.18-winx64 # 设置为">
+<meta name="twitter:description" content="##1:在官网下载https://dev.mysql.com/downloads/mysql/（如图） ##2:解压之后，首先在解决的当前目录下添加my.ini文件(内容如下) [client] port=3306 default-character-set=utf8  [mysqld]  # 设置为MYSQL的安装目录  basedir=E:\mysql-5.7.18-winx64 # 设置为M">
 <meta name="twitter:image" content="https://wang-yulong.github.io/img/mysql1.png">
 
 
@@ -374,8 +374,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Diary/" itemprop="url" rel="index">
-                    <span itemprop="name">Diary</span>
+                  <a href="/categories/MySql/" itemprop="url" rel="index">
+                    <span itemprop="name">MySql</span>
                   </a>
                 </span>
 
@@ -409,9 +409,8 @@
       
 
       
-        <p>##1：在官网下载<a href="https://dev.mysql.com/downloads/mysql/（如图）" target="_blank" rel="external">https://dev.mysql.com/downloads/mysql/（如图）</a></p>
-<p><img src="/img/mysql1.png" alt="图片"></p>
-<p>##2：解压之后，首先在解决的当前目录下添加my.ini文件(内容如下)</p>
+        <p>##1:在官网下载<a href="https://dev.mysql.com/downloads/mysql/（如图）" target="_blank" rel="external">https://dev.mysql.com/downloads/mysql/（如图）</a><br><img src="/img/mysql1.png" alt="图片"></p>
+<p>##2:解压之后，首先在解决的当前目录下添加my.ini文件(内容如下)</p>
 <pre><code>[client]
 port=3306
 default-character-set=utf8
@@ -426,11 +425,11 @@ character_set_server=utf8
 sql_mode=NO_ENGINE_SUBSTITUTION,NO_AUTO_CREATE_USER
 #开启查询缓存
 explicit_defaults_for_timestamp=true
-</code></pre><h2 id="3-cd-切到解压目录-bin-依次执行如下命令"><a href="#3-cd-切到解压目录-bin-依次执行如下命令" class="headerlink" title="3:(cd 切到解压目录/bin)依次执行如下命令"></a>3:(cd 切到解压目录/bin)依次执行如下命令</h2><pre><code>mysqld -install（注册mysql服务）
+</code></pre><h2 id="3-cd-切到解压目录-bin-依次执行如下命令"><a href="#3-cd-切到解压目录-bin-依次执行如下命令" class="headerlink" title="3:(cd 切到解压目录/bin)依次执行如下命令"></a>3:(cd 切到解压目录/bin)依次执行如下命令</h2><pre><code>mysqld -install（注册mysql服务
 mysqld --initilize --user=mysql --datadir=data(初始化mysql的data,密码等信息 初始化root的密码为空)
-net start mysql(启动mysql服务)
+net start mysql(启动mysql服务) net start mysql
 mysqladmin -u root -p password(设置新密码)
-</code></pre><p>##4: 常见问题<br>     (1) mysqld -install 结果Install/Remove of the Service Denied!<br>         解决方案：进入 C:\Window\System32  找到CMD.EXE 右键选择 以管理员身份 进行，再进入相应目录执行命令，一切就OK了。<br>     (2)执行报错 应用程序无法正常启动（0x000007b） 如图</p>
+</code></pre><p>##4:常见问题<br>     (1) mysqld -install 结果Install/Remove of the Service Denied!<br>         解决方案：进入 C:\Window\System32  找到CMD.EXE 右键选择 以管理员身份 进行，再进入相应目录执行命令，一切就OK了。<br>     (2)执行报错 应用程序无法正常启动（0x000007b） 如图</p>
 <p><img src="/img/mysql2.png" alt="图片">  </p>
 <pre><code>解决方案：可以使用如何使用DirectX修复工具进行修复
 </code></pre><p>详细可查看 <a href="http://jingyan.baidu.com/article/ed2a5d1f57a1ab09f6be17d8.html" target="_blank" rel="external">http://jingyan.baidu.com/article/ed2a5d1f57a1ab09f6be17d8.html</a></p>
@@ -573,7 +572,7 @@ mysqladmin -u root -p password(设置新密码)
                alt="王玉龙" />
           <p class="site-author-name" itemprop="name">王玉龙</p>
            
-              <p class="site-description motion-element" itemprop="description">做自己爱做的事，爱自己在做的事！</p>
+              <p class="site-description motion-element" itemprop="description">莫等闲,白了少年头！</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -581,7 +580,7 @@ mysqladmin -u root -p password(设置新密码)
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -591,7 +590,7 @@ mysqladmin -u root -p password(设置新密码)
             
             
             <div class="site-state-item site-state-categories">
-              <a href="/categories/index-1.html">
+              <a href="/categories/index.html">
                 <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">分类</span>
               </a>
@@ -602,8 +601,8 @@ mysqladmin -u root -p password(设置新密码)
             
             
             <div class="site-state-item site-state-tags">
-              <a href="/tags/标签1.html">
-                <span class="site-state-item-count">1</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
