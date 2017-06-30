@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wang-yulong.github.io/"/>
-  <updated>2017-06-27T07:12:26.650Z</updated>
+  <updated>2017-06-30T04:35:38.607Z</updated>
   <id>https://wang-yulong.github.io/</id>
   
   <author>
@@ -16,16 +16,101 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>&#39;mysql建表不能用作变量名称的&#39;</title>
+    <link href="https://wang-yulong.github.io/2017/06/30/mysql%E5%BB%BA%E8%A1%A8%E4%B8%8D%E8%83%BD%E7%94%A8%E4%BD%9C%E5%8F%98%E9%87%8F%E5%90%8D%E7%A7%B0%E7%9A%84/"/>
+    <id>https://wang-yulong.github.io/2017/06/30/mysql建表不能用作变量名称的/</id>
+    <published>2017-06-30T04:33:04.000Z</published>
+    <updated>2017-06-30T04:35:38.607Z</updated>
+    
+    <content type="html"><![CDATA[<p>##mysql 建表的时候这些词不能当做列名，否则批接sql串查询的时候会有一些莫名其妙的问题，此处只是用于记录；</p>
+<p>###1 index</p>
+<p>###2 key</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##mysql 建表的时候这些词不能当做列名，否则批接sql串查询的时候会有一些莫名其妙的问题，此处只是用于记录；&lt;/p&gt;
+&lt;p&gt;###1 index&lt;/p&gt;
+&lt;p&gt;###2 key&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>&#39;mysql用法总结&#39;</title>
+    <link href="https://wang-yulong.github.io/2017/06/27/mysql%E7%94%A8%E6%B3%95%E6%80%BB%E7%BB%93/"/>
+    <id>https://wang-yulong.github.io/2017/06/27/mysql用法总结/</id>
+    <published>2017-06-27T08:24:40.000Z</published>
+    <updated>2017-06-27T09:08:37.307Z</updated>
+    
+    <content type="html"><![CDATA[<p>##1:mysql建表，带时间戳<br>    DROP TABLE IF EXISTS <code>CONTENT</code>;<br>    CREATE TABLE <code>CONTENT</code> (<br>      <code>ID</code> char(20) NOT NULL,<br>      <code>CURRENT_TIME</code> timestamp not null default current_timestamp,<br>      PRIMARY KEY (<code>ID</code>)<br>    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;</p>
+<pre><code>存储引擎是innodb。nnoDB 是 MySQL 上第一个提供外键约束的数据存储引擎，除了提供事务处理外，InnoDB 还支持行锁，提供和 Oracle 一样的一致性的不加锁读取，能增加并发读的用户数量并提高性能，不会增加锁的数量。InnoDB 的设计目标是处理大容量数据时最大化性能，它的 CPU 利用率是其他所有基于磁盘的关系数据库引擎中最有效率的。
+InnoDB 是一套放在 MySQL 后台的完整数据库系统，InnoDB 有它自己的缓冲池，能缓冲数据和索引，InnoDB 还把数据和索引存放在表空间里面，可能包含好几个文件，这和 MyISAM 表完全不同，在 MyISAM 中，表被存放在单独的文件中，InnoDB 表的大小只受限于操作系统文件的大小，一般为 2GB。
+</code></pre><p>##2: mysql导出建表语句</p>
+<pre><code>数据库-&gt;右键-&gt;转储为SQL
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##1:mysql建表，带时间戳&lt;br&gt;    DROP TABLE IF EXISTS &lt;code&gt;CONTENT&lt;/code&gt;;&lt;br&gt;    CREATE TABLE &lt;code&gt;CONTENT&lt;/code&gt; (&lt;br&gt;      &lt;code&gt;ID&lt;/code&gt; ch
+    
+    </summary>
+    
+    
+      <category term="-mysql" scheme="https://wang-yulong.github.io/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
     <title>&#39;html常见问题&#39;</title>
     <link href="https://wang-yulong.github.io/2017/06/27/html%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/"/>
     <id>https://wang-yulong.github.io/2017/06/27/html常见问题/</id>
     <published>2017-06-27T07:12:26.000Z</published>
-    <updated>2017-06-27T07:12:26.650Z</updated>
+    <updated>2017-06-29T06:36:28.787Z</updated>
+    
+    <content type="html"><![CDATA[<p>##1 :$.ajax返回一个对象</p>
+<pre><code>客户端：
+$.ajax({
+    type:&quot;Get&quot;,
+    url:&quot;CommonServlet&quot;,
+    data:
+        {
+            functionName:&quot;&lt;%=RequestConst.QuerySingleTemplate %&gt;&quot;,
+            templateId:$(&quot;#sel&quot;).val(),
+        },
+    dataType:&quot;json&quot;,
+    success:function(obj)
+    {
+        //var template=eval(obj);
+        //alert(&quot;12423&quot;);
+        alert(obj.url);
+        //$(&quot;#templateUrl&quot;).val(template.url);
+    }
+});
+服务端:
+
+response.getWriter().print(JSONObject.fromObject(templateInfo));
+</code></pre><p>##2 eval(“3*10”)执行表达式的内容</p>
+]]></content>
     
     <summary type="html">
     
+      &lt;p&gt;##1 :$.ajax返回一个对象&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;客户端：
+$.ajax({
+    type:&amp;quot;Get&amp;quot;,
+    url:&amp;quot;CommonServlet&amp;quot;,
+    data:
+        {
+         
+    
     </summary>
     
+    
+      <category term="html" scheme="https://wang-yulong.github.io/tags/html/"/>
     
   </entry>
   
@@ -890,7 +975,7 @@ static void Main(String []args)
 <h3 id="参考式"><a href="#参考式" class="headerlink" title="参考式"></a>参考式</h3><p>我经常去的几个网站<a href="http://www.baidu.com" title="Baidu" target="_blank" rel="external">百度</a>、<a href="http://www.leanote.com" title="Leanote" target="_blank" rel="external">Leanote</a>以及<a href="http://http://blog.leanote.com/freewalk" title="梵居闹市" target="_blank" rel="external">自己的博客</a><br><a href="http://www.leanote.com" title="Leanote" target="_blank" rel="external">Leanote 笔记</a>是一个不错的<a href="http://http://blog.leanote.com/freewalk" target="_blank" rel="external">网站</a>。</p>
 <h3 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h3><p>See my <a href="/about/">About</a> page for details</p>
 <h3 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h3><p><a href="http://example.com/" target="_blank" rel="external">http://example.com/</a></p>
-<p><a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x61;&#100;&#x64;&#x72;&#x65;&#115;&#115;&#x40;&#49;&#52;&#50;&#x35;&#x32;&#x32;&#x36;&#x34;&#x36;&#54;&#64;&#x71;&#x71;&#46;&#x63;&#111;&#x6d;">&#x61;&#100;&#x64;&#x72;&#x65;&#115;&#115;&#x40;&#49;&#52;&#50;&#x35;&#x32;&#x32;&#x36;&#x34;&#x36;&#54;&#64;&#x71;&#x71;&#46;&#x63;&#111;&#x6d;</a></p>
+<p><a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#97;&#x64;&#100;&#114;&#x65;&#x73;&#115;&#64;&#49;&#52;&#x32;&#x35;&#x32;&#x32;&#54;&#52;&#54;&#54;&#x40;&#113;&#x71;&#46;&#x63;&#x6f;&#x6d;">&#97;&#x64;&#100;&#114;&#x65;&#x73;&#115;&#64;&#49;&#52;&#x32;&#x35;&#x32;&#x32;&#54;&#52;&#54;&#54;&#x40;&#113;&#x71;&#46;&#x63;&#x6f;&#x6d;</a></p>
 <h2 id="锚点-没实现"><a href="#锚点-没实现" class="headerlink" title="锚点(没实现)"></a>锚点(没实现)</h2><p>跳转到<a href="#index">注意事项</a></p>
 <p>Markdown<br>:    轻量级文本标记语言，可以转换成html，pdf等格式（左侧有一个可见的冒号和四个不可见的空格）<br>代码块 2<br>:   这是代码块的定义（左侧有一个可见的冒号和四个不可见的空格）<br>        代码块（左侧有八个不可见的空格）</p>
 <ul>

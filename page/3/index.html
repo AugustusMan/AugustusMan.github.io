@@ -312,6 +312,298 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://wang-yulong.github.io/2017/05/05/c-invoke和BeginInvoke-细节收录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王玉龙">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1492093769&di=6f546b4acf0c68f144fc8ae24f48d832&src=http://pic15.nipic.com/20110630/6322714_105943746342_2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一人静在书中">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/05/c-invoke和BeginInvoke-细节收录/" itemprop="url">
+                  c# invoke和BeginInvoke 细节收录
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-05T20:34:08+08:00">
+                2017-05-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Invoke"><a href="#Invoke" class="headerlink" title="Invoke"></a>Invoke</h1><ol>
+<li><p>MSDN的解释</p>
+<p> 在拥有此控件的基础窗口句柄的线程上执行指定的委托</p>
+</li>
+<li><p>自我理解</p>
+<p> （1）同步的，必须得等委托内的代码执行完成之后才能执行</p>
+</li>
+</ol>
+<h1 id="BeginInvoke"><a href="#BeginInvoke" class="headerlink" title="BeginInvoke"></a>BeginInvoke</h1><ol>
+<li>MSDN的解释</li>
+</ol>
+<pre><code>在创建控件的基础句柄所在线程上异步执行指定委托。
+</code></pre><ol>
+<li><p>自我理解</p>
+<p> （1）异步的，不一定非得等委托内的代码运行结束才执行</p>
+</li>
+</ol>
+<h1 id="个人实例"><a href="#个人实例" class="headerlink" title="个人实例"></a>个人实例</h1><p><img src="img/invoke.png" alt="图片"></p>
+<p>  如图所示，创建一个父窗口，在父窗口中点击按钮弹出一个新的子窗口Form6;</p>
+<p>  在子窗口添加按钮点击的时候执行关闭操作（this.Close），同时用根窗口所在的Form弹出另一个Form;</p>
+<p>  如果使用Invoke会阻止this.Close的执行；</p>
+<p>  如果使用BeginInvoke的话则不会；</p>
+<p>##多线程场景</p>
+<p>###1：Form关闭的时候回到主线程去弹窗（这有这样才可以）</p>
+<pre><code>EventHandler actionDelegate = delegate
+   {
+       _signInAlertForm.Close();
+   };
+   mainTreadForm.BeginInvoke(actionDelegate, &quot;&quot;);//主线程对应的Form
+</code></pre><p> }</p>
+<p>###2：计时器结束的时候想去关掉Form,但是计时器会单独新启动一个线程，此时需要回到创建该控件的线程去执行某个操作(测试这两种都可以)</p>
+<pre><code>EventHandler actionDelegate = delegate
+     {
+         _signInAlertForm.Hide();
+     };
+     this._signInAlertForm.BeginInvoke(actionDelegate, &quot;&quot;);
+
+      this._signInAlertForm.Invoke(actionDelegate, &quot;&quot;);
+ }
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://wang-yulong.github.io/2017/05/04/c-按F5不能编译的问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王玉龙">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1492093769&di=6f546b4acf0c68f144fc8ae24f48d832&src=http://pic15.nipic.com/20110630/6322714_105943746342_2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一人静在书中">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/04/c-按F5不能编译的问题/" itemprop="url">
+                  c#按F5不能编译的问题以及C#平台和目标平台的区别
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-04T15:42:40+08:00">
+                2017-05-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="1-c-按F5不能编译的问题"><a href="#1-c-按F5不能编译的问题" class="headerlink" title="1:c# 按F5不能编译的问题"></a>1:c# 按F5不能编译的问题</h1><p>   在解决方案上右键-》配置管理器：如图</p>
+<p><img src="/img/vs1.png" alt="图片1"></p>
+<p>  在此处可以配置F5调试运行的时候，是否生成某个项目；</p>
+<h1 id="2-平台和目标平台的区别"><a href="#2-平台和目标平台的区别" class="headerlink" title="2:平台和目标平台的区别"></a>2:平台和目标平台的区别</h1><p>  平台（是相对于整个解决方案来说的）</p>
+<p>1.整个解决生成的时候默认只生成当前平台下的项目(如图)</p>
+<p><img src="/img/vs2.png" alt="图片1"></p>
+<p>2.当前也可以在AnyCpu下生成x86的项目（不推荐，编译时会有好多提醒）</p>
+<p>3.当前项目-》属性-》生成–》平台–》只有一个可选项时，可以在解决方案右键-》配置管理器（添加新平台）如图</p>
+<p><img src="/img/v3.png" alt="图片1"></p>
+<p>  目标平台（是指你的程序可以在那个平台上运行）</p>
+<p> 1.如果在x86生成(程序可以在32位机以及64位上运行)，之所以这样，是因为windows平台的向下兼容性；</p>
+<p> 2.x64(程序可以在32位机和64位机上运行)</p>
+<p> 3.anycpu(程序可以在32位机器和64机器上运行)</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://wang-yulong.github.io/2017/04/28/win32-程序开发流程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -712,7 +1004,7 @@ static void Main(String []args)
 <h3 id="参考式"><a href="#参考式" class="headerlink" title="参考式"></a>参考式</h3><p>我经常去的几个网站<a href="http://www.baidu.com" title="Baidu" target="_blank" rel="external">百度</a>、<a href="http://www.leanote.com" title="Leanote" target="_blank" rel="external">Leanote</a>以及<a href="http://http://blog.leanote.com/freewalk" title="梵居闹市" target="_blank" rel="external">自己的博客</a><br><a href="http://www.leanote.com" title="Leanote" target="_blank" rel="external">Leanote 笔记</a>是一个不错的<a href="http://http://blog.leanote.com/freewalk" target="_blank" rel="external">网站</a>。</p>
 <h3 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h3><p>See my <a href="/about/">About</a> page for details</p>
 <h3 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h3><p><a href="http://example.com/" target="_blank" rel="external">http://example.com/</a></p>
-<p><a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x61;&#100;&#x64;&#x72;&#x65;&#115;&#115;&#x40;&#49;&#52;&#50;&#x35;&#x32;&#x32;&#x36;&#x34;&#x36;&#54;&#64;&#x71;&#x71;&#46;&#x63;&#111;&#x6d;">&#x61;&#100;&#x64;&#x72;&#x65;&#115;&#115;&#x40;&#49;&#52;&#50;&#x35;&#x32;&#x32;&#x36;&#x34;&#x36;&#54;&#64;&#x71;&#x71;&#46;&#x63;&#111;&#x6d;</a></p>
+<p><a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#97;&#x64;&#100;&#114;&#x65;&#x73;&#115;&#64;&#49;&#52;&#x32;&#x35;&#x32;&#x32;&#54;&#52;&#54;&#54;&#x40;&#113;&#x71;&#46;&#x63;&#x6f;&#x6d;">&#97;&#x64;&#100;&#114;&#x65;&#x73;&#115;&#64;&#49;&#52;&#x32;&#x35;&#x32;&#x32;&#54;&#52;&#54;&#54;&#x40;&#113;&#x71;&#46;&#x63;&#x6f;&#x6d;</a></p>
 <h2 id="锚点-没实现"><a href="#锚点-没实现" class="headerlink" title="锚点(没实现)"></a>锚点(没实现)</h2><p>跳转到<a href="#index">注意事项</a></p>
 <p>Markdown<br>:    轻量级文本标记语言，可以转换成html，pdf等格式（左侧有一个可见的冒号和四个不可见的空格）<br>代码块 2<br>:   这是代码块的定义（左侧有一个可见的冒号和四个不可见的空格）<br>        代码块（左侧有八个不可见的空格）</p>
 <ul>
@@ -856,7 +1148,7 @@ int main(void)
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -878,7 +1170,7 @@ int main(void)
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

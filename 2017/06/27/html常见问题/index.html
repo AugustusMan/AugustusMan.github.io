@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="html," />
 
 
 
@@ -89,17 +89,17 @@
 
 
 
-<meta name="description" content="莫等闲,白了少年头！">
-<meta name="keywords">
+<meta name="description" content="##1 :$.ajax返回一个对象 客户端： $.ajax({     type:&amp;quot;Get&amp;quot;,     url:&amp;quot;CommonServlet&amp;quot;,     data:         {             functionName:&amp;quot;&amp;lt;%=RequestConst.QuerySingleTemplate %&amp;gt;&amp;quot;,">
+<meta name="keywords" content="html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="'html常见问题'">
 <meta property="og:url" content="https://wang-yulong.github.io/2017/06/27/html常见问题/index.html">
 <meta property="og:site_name" content="一人静在书中">
-<meta property="og:description" content="莫等闲,白了少年头！">
-<meta property="og:updated_time" content="2017-06-27T07:12:26.650Z">
+<meta property="og:description" content="##1 :$.ajax返回一个对象 客户端： $.ajax({     type:&amp;quot;Get&amp;quot;,     url:&amp;quot;CommonServlet&amp;quot;,     data:         {             functionName:&amp;quot;&amp;lt;%=RequestConst.QuerySingleTemplate %&amp;gt;&amp;quot;,">
+<meta property="og:updated_time" content="2017-06-29T06:36:28.787Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="'html常见问题'">
-<meta name="twitter:description" content="莫等闲,白了少年头！">
+<meta name="twitter:description" content="##1 :$.ajax返回一个对象 客户端： $.ajax({     type:&amp;quot;Get&amp;quot;,     url:&amp;quot;CommonServlet&amp;quot;,     data:         {             functionName:&amp;quot;&amp;lt;%=RequestConst.QuerySingleTemplate %&amp;gt;&amp;quot;,">
 
 
 
@@ -384,7 +384,30 @@
       
 
       
-        
+        <p>##1 :$.ajax返回一个对象</p>
+<pre><code>客户端：
+$.ajax({
+    type:&quot;Get&quot;,
+    url:&quot;CommonServlet&quot;,
+    data:
+        {
+            functionName:&quot;&lt;%=RequestConst.QuerySingleTemplate %&gt;&quot;,
+            templateId:$(&quot;#sel&quot;).val(),
+        },
+    dataType:&quot;json&quot;,
+    success:function(obj)
+    {
+        //var template=eval(obj);
+        //alert(&quot;12423&quot;);
+        alert(obj.url);
+        //$(&quot;#templateUrl&quot;).val(template.url);
+    }
+});
+服务端:
+
+response.getWriter().print(JSONObject.fromObject(templateInfo));
+</code></pre><p>##2 eval(“3*10”)执行表达式的内容</p>
+
       
     </div>
 
@@ -411,6 +434,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/html/" rel="tag"># html</a>
+          
+        </div>
+      
 
       
         
@@ -419,6 +448,10 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/27/mysql用法总结/" rel="next" title="'mysql用法总结'">
+                <i class="fa fa-chevron-left"></i> 'mysql用法总结'
+              </a>
             
           </div>
 
@@ -491,7 +524,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -513,7 +546,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
