@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wang-yulong.github.io/"/>
-  <updated>2017-07-06T12:13:15.043Z</updated>
+  <updated>2017-07-06T12:15:43.776Z</updated>
   <id>https://wang-yulong.github.io/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="https://wang-yulong.github.io/2017/07/06/struts2%E9%87%8D%E5%AE%9A%E5%90%91%E4%BC%A0%E8%BE%93%E6%B1%89%E5%AD%97%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>https://wang-yulong.github.io/2017/07/06/struts2重定向传输汉字的问题/</id>
     <published>2017-07-06T11:42:37.000Z</published>
-    <updated>2017-07-06T12:13:15.043Z</updated>
+    <updated>2017-07-06T12:15:43.776Z</updated>
     
     <content type="html"><![CDATA[<p>##struts中的配置</p>
-<pre><code>##1
+<pre><code>1)
 &lt;package name=&quot;test1&quot; namespace=&quot;&quot; extends=&quot;struts-default&quot;&gt;
     &lt;action name=&quot;test1Action&quot; class=&quot;com.action.UserAction&quot; method=&quot;testAction&quot;&gt;
         &lt;result name=&quot;success&quot; type=&quot;redirect&quot; &gt;
@@ -32,7 +32,7 @@
         &lt;/result&gt;
     &lt;/action&gt;
 &lt;/package&gt;
- ##2
+ 2）
  &lt;package name=&quot;test1&quot; namespace=&quot;&quot; extends=&quot;struts-default&quot;&gt;
     &lt;action name=&quot;test1Action&quot; class=&quot;com.action.UserAction&quot; method=&quot;testAction&quot;&gt;
         &lt;result name=&quot;success&quot; type=&quot;redirect&quot;&gt;/login.jsp?message=${message}&lt;/result&gt;
@@ -87,14 +87,14 @@ public String testAction() throws UnsupportedEncodingException
     <summary type="html">
     
       &lt;p&gt;##struts中的配置&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;##1
+&lt;pre&gt;&lt;code&gt;1)
 &amp;lt;package name=&amp;quot;test1&amp;quot; namespace=&amp;quot;&amp;quot; extends=&amp;quot;struts-default&amp;quot;&amp;gt;
-    &amp;lt;
+    &amp;lt;a
     
     </summary>
     
     
-      <category term="---struts2" scheme="https://wang-yulong.github.io/tags/struts2/"/>
+      <category term="-struts2" scheme="https://wang-yulong.github.io/tags/struts2/"/>
     
   </entry>
   
