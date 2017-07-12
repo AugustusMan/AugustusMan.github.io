@@ -121,11 +121,11 @@ public String testAction() throws UnsupportedEncodingException
   </entry>
   
   <entry>
-    <title>&#39;mysql建表不能用作变量名称的&#39;</title>
+    <title>mysql建表不能用作变量名称的</title>
     <link href="https://wang-yulong.github.io/2017/06/30/mysql%E5%BB%BA%E8%A1%A8%E4%B8%8D%E8%83%BD%E7%94%A8%E4%BD%9C%E5%8F%98%E9%87%8F%E5%90%8D%E7%A7%B0%E7%9A%84/"/>
     <id>https://wang-yulong.github.io/2017/06/30/mysql建表不能用作变量名称的/</id>
     <published>2017-06-30T04:33:04.000Z</published>
-    <updated>2017-07-12T16:34:05.422Z</updated>
+    <updated>2017-07-12T16:37:34.880Z</updated>
     
     <content type="html"><![CDATA[<h2 id="mysql-建表的时候这些词不能当做列名，否则批接sql串查询的时候会有一些莫名其妙的问题，此处只是用于记录；"><a href="#mysql-建表的时候这些词不能当做列名，否则批接sql串查询的时候会有一些莫名其妙的问题，此处只是用于记录；" class="headerlink" title="mysql 建表的时候这些词不能当做列名，否则批接sql串查询的时候会有一些莫名其妙的问题，此处只是用于记录；"></a>mysql 建表的时候这些词不能当做列名，否则批接sql串查询的时候会有一些莫名其妙的问题，此处只是用于记录；</h2><h3 id="1-index"><a href="#1-index" class="headerlink" title="1 index"></a>1 index</h3><h3 id="2-key"><a href="#2-key" class="headerlink" title="2 key"></a>2 key</h3>]]></content>
     
@@ -141,11 +141,11 @@ public String testAction() throws UnsupportedEncodingException
   </entry>
   
   <entry>
-    <title>&#39;mysql用法总结&#39;</title>
+    <title>mysql用法总结</title>
     <link href="https://wang-yulong.github.io/2017/06/27/mysql%E7%94%A8%E6%B3%95%E6%80%BB%E7%BB%93/"/>
     <id>https://wang-yulong.github.io/2017/06/27/mysql用法总结/</id>
     <published>2017-06-27T08:24:40.000Z</published>
-    <updated>2017-07-12T16:34:13.833Z</updated>
+    <updated>2017-07-12T16:37:44.310Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1-mysql建表，带时间戳"><a href="#1-mysql建表，带时间戳" class="headerlink" title="1:mysql建表，带时间戳"></a>1:mysql建表，带时间戳</h2><pre><code>DROP TABLE IF EXISTS `CONTENT`;
 CREATE TABLE `CONTENT` (
