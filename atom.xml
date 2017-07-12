@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wang-yulong.github.io/"/>
-  <updated>2017-07-10T12:19:34.725Z</updated>
+  <updated>2017-07-12T16:47:13.392Z</updated>
   <id>https://wang-yulong.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://wang-yulong.github.io/2017/07/10/struts2%E5%AF%BC%E5%85%A5%E6%BA%90%E6%96%87%E4%BB%B6/"/>
     <id>https://wang-yulong.github.io/2017/07/10/struts2导入源文件/</id>
     <published>2017-07-10T12:13:49.000Z</published>
-    <updated>2017-07-10T12:19:34.725Z</updated>
+    <updated>2017-07-12T16:47:13.392Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1：查看xwork包下面的-ActionSupport"><a href="#1：查看xwork包下面的-ActionSupport" class="headerlink" title="1：查看xwork包下面的  ActionSupport"></a>1：查看xwork包下面的  ActionSupport</h2><p>   导入<br>   struts-2.3.16.3\src\xwork-core</p>
 <h2 id="2：查看struts包下面的"><a href="#2：查看struts包下面的" class="headerlink" title="2：查看struts包下面的"></a>2：查看struts包下面的</h2><p>   导入 struts-2.3.16.3\src\core</p>
@@ -42,7 +42,7 @@
     <link href="https://wang-yulong.github.io/2017/07/06/struts2%E9%87%8D%E5%AE%9A%E5%90%91%E4%BC%A0%E8%BE%93%E6%B1%89%E5%AD%97%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>https://wang-yulong.github.io/2017/07/06/struts2重定向传输汉字的问题/</id>
     <published>2017-07-06T11:42:37.000Z</published>
-    <updated>2017-07-06T12:15:43.776Z</updated>
+    <updated>2017-07-12T16:46:45.969Z</updated>
     
     <content type="html"><![CDATA[<p>##struts中的配置</p>
 <pre><code>1)
@@ -251,11 +251,11 @@ keyCodeStr= new String(keyCodeStr.getBytes(&quot;ISO8851-1&quot;),&quot;utf-8&qu
   </entry>
   
   <entry>
-    <title>rss报错原因记录</title>
+    <title>hexo开启rss报错原因记录</title>
     <link href="https://wang-yulong.github.io/2017/06/25/rss%E6%8A%A5%E9%94%99%E5%8E%9F%E5%9B%A0%E8%AE%B0%E5%BD%95/"/>
     <id>https://wang-yulong.github.io/2017/06/25/rss报错原因记录/</id>
     <published>2017-06-25T03:25:05.000Z</published>
-    <updated>2017-06-25T03:30:40.220Z</updated>
+    <updated>2017-07-12T16:46:08.718Z</updated>
     
     <content type="html"><![CDATA[<p>打开Rss报错如图</p>
 <p>Input is not proper UTF-8, indicate encoding </p>
@@ -281,6 +281,8 @@ keyCodeStr= new String(keyCodeStr.getBytes(&quot;ISO8851-1&quot;),&quot;utf-8&qu
     </summary>
     
     
+      <category term="工具类" scheme="https://wang-yulong.github.io/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
+    
   </entry>
   
   <entry>
@@ -288,7 +290,7 @@ keyCodeStr= new String(keyCodeStr.getBytes(&quot;ISO8851-1&quot;),&quot;utf-8&qu
     <link href="https://wang-yulong.github.io/2017/06/22/myeclipse%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     <id>https://wang-yulong.github.io/2017/06/22/myeclipse常用快捷键/</id>
     <published>2017-06-22T08:41:38.000Z</published>
-    <updated>2017-06-22T10:04:36.540Z</updated>
+    <updated>2017-07-12T16:44:38.805Z</updated>
     
     <content type="html"><![CDATA[<p>##Myeclipse常用快捷键标记</p>
 <p>1：Ctrl+H 搜索整个项目</p>
@@ -309,6 +311,8 @@ keyCodeStr= new String(keyCodeStr.getBytes(&quot;ISO8851-1&quot;),&quot;utf-8&qu
     
     </summary>
     
+    
+      <category term="工具类" scheme="https://wang-yulong.github.io/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
     
   </entry>
   
@@ -415,7 +419,7 @@ servelt的映射路径写错了。。如图所示
     <link href="https://wang-yulong.github.io/2017/06/09/C-sharp%E5%B0%81%E8%A3%85%EF%BC%88List%E4%B8%8EDictionary%EF%BC%89/"/>
     <id>https://wang-yulong.github.io/2017/06/09/C-sharp封装（List与Dictionary）/</id>
     <published>2017-06-09T12:30:43.000Z</published>
-    <updated>2017-06-25T03:18:59.562Z</updated>
+    <updated>2017-07-12T16:42:45.678Z</updated>
     
     <content type="html"><![CDATA[<p>##简单描述</p>
 <p>KeyedList:</p>
@@ -808,6 +812,8 @@ public sealed class KeyedList&lt;TKey, TValue&gt; :
     </summary>
     
     
+      <category term="c#" scheme="https://wang-yulong.github.io/tags/c/"/>
+    
   </entry>
   
   <entry>
@@ -815,7 +821,7 @@ public sealed class KeyedList&lt;TKey, TValue&gt; :
     <link href="https://wang-yulong.github.io/2017/05/23/c-%E6%B5%8B%E9%87%8F%E7%B1%BB/"/>
     <id>https://wang-yulong.github.io/2017/05/23/c-测量类/</id>
     <published>2017-05-23T07:07:36.000Z</published>
-    <updated>2017-05-23T07:35:38.225Z</updated>
+    <updated>2017-07-12T16:43:25.007Z</updated>
     
     <content type="html"><![CDATA[<p>#测量某个点是否在不规则路径上</p>
 <h2 id="1：对路径进行克隆（防止当前的操作影响所要渲染的路径）"><a href="#1：对路径进行克隆（防止当前的操作影响所要渲染的路径）" class="headerlink" title="1：对路径进行克隆（防止当前的操作影响所要渲染的路径）"></a>1：对路径进行克隆（防止当前的操作影响所要渲染的路径）</h2><pre><code>bool isExist=false;
@@ -859,6 +865,8 @@ bool result= myRegion.IsVisible(inputponint);
     </summary>
     
     
+      <category term="c#" scheme="https://wang-yulong.github.io/tags/c/"/>
+    
   </entry>
   
   <entry>
@@ -866,7 +874,7 @@ bool result= myRegion.IsVisible(inputponint);
     <link href="https://wang-yulong.github.io/2017/05/05/c-invoke%E5%92%8CBeginInvoke-%E7%BB%86%E8%8A%82%E6%94%B6%E5%BD%95/"/>
     <id>https://wang-yulong.github.io/2017/05/05/c-invoke和BeginInvoke-细节收录/</id>
     <published>2017-05-05T12:34:08.000Z</published>
-    <updated>2017-05-24T12:53:21.713Z</updated>
+    <updated>2017-07-12T16:42:14.139Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Invoke"><a href="#Invoke" class="headerlink" title="Invoke"></a>Invoke</h1><ol>
 <li><p>MSDN的解释</p>
@@ -919,6 +927,8 @@ bool result= myRegion.IsVisible(inputponint);
     </summary>
     
     
+      <category term="c#" scheme="https://wang-yulong.github.io/tags/c/"/>
+    
   </entry>
   
   <entry>
@@ -926,7 +936,7 @@ bool result= myRegion.IsVisible(inputponint);
     <link href="https://wang-yulong.github.io/2017/05/04/c-%E6%8C%89F5%E4%B8%8D%E8%83%BD%E7%BC%96%E8%AF%91%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>https://wang-yulong.github.io/2017/05/04/c-按F5不能编译的问题/</id>
     <published>2017-05-04T07:42:40.000Z</published>
-    <updated>2017-05-04T08:06:31.491Z</updated>
+    <updated>2017-07-12T16:43:02.946Z</updated>
     
     <content type="html"><![CDATA[<h1 id="1-c-按F5不能编译的问题"><a href="#1-c-按F5不能编译的问题" class="headerlink" title="1:c# 按F5不能编译的问题"></a>1:c# 按F5不能编译的问题</h1><p>   在解决方案上右键-》配置管理器：如图</p>
 <p><img src="/img/vs1.png" alt="图片1"></p>
@@ -950,6 +960,8 @@ bool result= myRegion.IsVisible(inputponint);
     </summary>
     
     
+      <category term="c#" scheme="https://wang-yulong.github.io/tags/c/"/>
+    
   </entry>
   
   <entry>
@@ -957,7 +969,7 @@ bool result= myRegion.IsVisible(inputponint);
     <link href="https://wang-yulong.github.io/2017/04/28/win32-%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/"/>
     <id>https://wang-yulong.github.io/2017/04/28/win32-程序开发流程/</id>
     <published>2017-04-28T04:47:34.000Z</published>
-    <updated>2017-04-28T05:25:34.518Z</updated>
+    <updated>2017-07-12T16:47:31.283Z</updated>
     
     <content type="html"><![CDATA[<h1 id="win32程序开发流程"><a href="#win32程序开发流程" class="headerlink" title="win32程序开发流程"></a>win32程序开发流程</h1><h2 id="win32特点（message-based–基于消息）-event-driven–事件驱动"><a href="#win32特点（message-based–基于消息）-event-driven–事件驱动" class="headerlink" title="win32特点（message based–基于消息） (event driven–事件驱动)"></a>win32特点（message based–基于消息） (event driven–事件驱动)</h2><p>  win32程序是message based,event driven 。也就是说 win32程序的运行是依靠外部不断发生的事件来驱动的,也就是说，程序不断等待（类似于有一个while循环）,等待任何可能的进入，然后做判断，在做适当的处理。因此win32程序只需要做好如下几件事情就可以了：</p>
 <ol>
@@ -977,6 +989,8 @@ bool result= myRegion.IsVisible(inputponint);
     </summary>
     
     
+      <category term="--win32" scheme="https://wang-yulong.github.io/tags/win32/"/>
+    
   </entry>
   
   <entry>
@@ -984,7 +998,7 @@ bool result= myRegion.IsVisible(inputponint);
     <link href="https://wang-yulong.github.io/2017/04/26/c-sharp-ref-%E4%B8%8E-out-%E5%85%B3%E9%94%AE%E5%AD%97/"/>
     <id>https://wang-yulong.github.io/2017/04/26/c-sharp-ref-与-out-关键字/</id>
     <published>2017-04-26T10:48:14.000Z</published>
-    <updated>2017-06-25T03:30:48.784Z</updated>
+    <updated>2017-07-12T16:42:27.273Z</updated>
     
     <content type="html"><![CDATA[<h1 id="c-sharp-Ref关键字与out关键字的相同点与不同点"><a href="#c-sharp-Ref关键字与out关键字的相同点与不同点" class="headerlink" title="c#(sharp) Ref关键字与out关键字的相同点与不同点"></a>c#(sharp) Ref关键字与out关键字的相同点与不同点</h1><p>  相同点：方法的定义和调用都必须显示使用ref、out关键字。都会导致参数按引用传递。</p>
 <p>  不同点：传递给ref关键字的参数必须赋初始值，而out不用。out关键字会清空变量，即使变量已经赋值也不行，退出函数时所有out引用个变量都要赋值。</p>
@@ -1047,6 +1061,8 @@ static void Main(String []args)
     </summary>
     
     
+      <category term="c#" scheme="https://wang-yulong.github.io/tags/c/"/>
+    
   </entry>
   
   <entry>
@@ -1054,7 +1070,7 @@ static void Main(String []args)
     <link href="https://wang-yulong.github.io/2017/04/15/hexo1/"/>
     <id>https://wang-yulong.github.io/2017/04/15/hexo1/</id>
     <published>2017-04-15T07:28:19.000Z</published>
-    <updated>2017-04-26T10:31:07.576Z</updated>
+    <updated>2017-07-12T16:44:04.976Z</updated>
     
     <content type="html"><![CDATA[<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>   hexo 写博客 ，标题title部分必须位于md文件的最上方，否则会报一些莫名其妙的错误。</p>
 <h2 id="加粗，斜体"><a href="#加粗，斜体" class="headerlink" title="加粗，斜体"></a>加粗，斜体</h2><p><strong>哈哈哈</strong>(“<strong>哈哈哈</strong>“)</p>
@@ -1078,7 +1094,7 @@ static void Main(String []args)
 <h3 id="参考式"><a href="#参考式" class="headerlink" title="参考式"></a>参考式</h3><p>我经常去的几个网站<a href="http://www.baidu.com" title="Baidu" target="_blank" rel="external">百度</a>、<a href="http://www.leanote.com" title="Leanote" target="_blank" rel="external">Leanote</a>以及<a href="http://http://blog.leanote.com/freewalk" title="梵居闹市" target="_blank" rel="external">自己的博客</a><br><a href="http://www.leanote.com" title="Leanote" target="_blank" rel="external">Leanote 笔记</a>是一个不错的<a href="http://http://blog.leanote.com/freewalk" target="_blank" rel="external">网站</a>。</p>
 <h3 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h3><p>See my <a href="/about/">About</a> page for details</p>
 <h3 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h3><p><a href="http://example.com/" target="_blank" rel="external">http://example.com/</a></p>
-<p><a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#97;&#100;&#x64;&#x72;&#x65;&#115;&#115;&#x40;&#49;&#x34;&#x32;&#53;&#x32;&#x32;&#x36;&#x34;&#54;&#54;&#x40;&#113;&#x71;&#x2e;&#x63;&#111;&#109;">&#97;&#100;&#x64;&#x72;&#x65;&#115;&#115;&#x40;&#49;&#x34;&#x32;&#53;&#x32;&#x32;&#x36;&#x34;&#54;&#54;&#x40;&#113;&#x71;&#x2e;&#x63;&#111;&#109;</a></p>
+<p><a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x61;&#100;&#100;&#114;&#x65;&#x73;&#x73;&#64;&#49;&#52;&#50;&#x35;&#x32;&#50;&#54;&#x34;&#x36;&#54;&#x40;&#113;&#113;&#x2e;&#99;&#111;&#x6d;">&#x61;&#100;&#100;&#114;&#x65;&#x73;&#x73;&#64;&#49;&#52;&#50;&#x35;&#x32;&#50;&#54;&#x34;&#x36;&#54;&#x40;&#113;&#113;&#x2e;&#99;&#111;&#x6d;</a></p>
 <h2 id="锚点-没实现"><a href="#锚点-没实现" class="headerlink" title="锚点(没实现)"></a>锚点(没实现)</h2><p>跳转到<a href="#index">注意事项</a></p>
 <p>Markdown<br>:    轻量级文本标记语言，可以转换成html，pdf等格式（左侧有一个可见的冒号和四个不可见的空格）<br>代码块 2<br>:   这是代码块的定义（左侧有一个可见的冒号和四个不可见的空格）<br>        代码块（左侧有八个不可见的空格）</p>
 <ul>
@@ -1148,6 +1164,8 @@ int main(void)
     
     </summary>
     
+    
+      <category term="工具类" scheme="https://wang-yulong.github.io/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
     
   </entry>
   
