@@ -125,7 +125,7 @@ public String testAction() throws UnsupportedEncodingException
     <link href="https://wang-yulong.github.io/2017/06/30/mysql%E5%BB%BA%E8%A1%A8%E4%B8%8D%E8%83%BD%E7%94%A8%E4%BD%9C%E5%8F%98%E9%87%8F%E5%90%8D%E7%A7%B0%E7%9A%84/"/>
     <id>https://wang-yulong.github.io/2017/06/30/mysql建表不能用作变量名称的/</id>
     <published>2017-06-30T04:33:04.000Z</published>
-    <updated>2017-07-12T16:28:17.181Z</updated>
+    <updated>2017-07-12T16:30:43.943Z</updated>
     
     <content type="html"><![CDATA[<p>##mysql 建表的时候这些词不能当做列名，否则批接sql串查询的时候会有一些莫名其妙的问题，此处只是用于记录；</p>
 <p>###1 index</p>
@@ -142,7 +142,7 @@ public String testAction() throws UnsupportedEncodingException
     </summary>
     
     
-      <category term="-mysql" scheme="https://wang-yulong.github.io/tags/mysql/"/>
+      <category term="---mysql" scheme="https://wang-yulong.github.io/tags/mysql/"/>
     
   </entry>
   
@@ -151,7 +151,7 @@ public String testAction() throws UnsupportedEncodingException
     <link href="https://wang-yulong.github.io/2017/06/27/mysql%E7%94%A8%E6%B3%95%E6%80%BB%E7%BB%93/"/>
     <id>https://wang-yulong.github.io/2017/06/27/mysql用法总结/</id>
     <published>2017-06-27T08:24:40.000Z</published>
-    <updated>2017-06-27T09:08:37.307Z</updated>
+    <updated>2017-07-12T16:30:33.043Z</updated>
     
     <content type="html"><![CDATA[<p>##1:mysql建表，带时间戳<br>    DROP TABLE IF EXISTS <code>CONTENT</code>;<br>    CREATE TABLE <code>CONTENT</code> (<br>      <code>ID</code> char(20) NOT NULL,<br>      <code>CURRENT_TIME</code> timestamp not null default current_timestamp,<br>      PRIMARY KEY (<code>ID</code>)<br>    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;</p>
 <pre><code>存储引擎是innodb。nnoDB 是 MySQL 上第一个提供外键约束的数据存储引擎，除了提供事务处理外，InnoDB 还支持行锁，提供和 Oracle 一样的一致性的不加锁读取，能增加并发读的用户数量并提高性能，不会增加锁的数量。InnoDB 的设计目标是处理大容量数据时最大化性能，它的 CPU 利用率是其他所有基于磁盘的关系数据库引擎中最有效率的。
@@ -167,7 +167,7 @@ InnoDB 是一套放在 MySQL 后台的完整数据库系统，InnoDB 有它自�
     </summary>
     
     
-      <category term="-mysql" scheme="https://wang-yulong.github.io/tags/mysql/"/>
+      <category term="---mysql" scheme="https://wang-yulong.github.io/tags/mysql/"/>
     
   </entry>
   
@@ -322,7 +322,7 @@ keyCodeStr= new String(keyCodeStr.getBytes(&quot;ISO8851-1&quot;),&quot;utf-8&qu
     <link href="https://wang-yulong.github.io/2017/06/21/mysql%E5%AE%89%E8%A3%85/"/>
     <id>https://wang-yulong.github.io/2017/06/21/mysql安装/</id>
     <published>2017-06-21T12:11:52.000Z</published>
-    <updated>2017-07-12T16:27:51.067Z</updated>
+    <updated>2017-07-12T16:30:49.850Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1-在官网下载https-dev-mysql-com-downloads-mysql-（如图）"><a href="#1-在官网下载https-dev-mysql-com-downloads-mysql-（如图）" class="headerlink" title="1:在官网下载https://dev.mysql.com/downloads/mysql/（如图）"></a>1:在官网下载<a href="https://dev.mysql.com/downloads/mysql/（如图）" target="_blank" rel="external">https://dev.mysql.com/downloads/mysql/（如图）</a></h2><p><img src="/img/mysql1.png" alt="图片"></p>
 <h2 id="2-解压之后，首先在解决的当前目录下添加my-ini文件-内容如下"><a href="#2-解压之后，首先在解决的当前目录下添加my-ini文件-内容如下" class="headerlink" title="2:解压之后，首先在解决的当前目录下添加my.ini文件(内容如下)"></a>2:解压之后，首先在解决的当前目录下添加my.ini文件(内容如下)</h2><pre><code>[client]
@@ -379,7 +379,7 @@ mysqladmin -u root -p password(设置新密码)
       <category term="MySql" scheme="https://wang-yulong.github.io/categories/MySql/"/>
     
     
-      <category term="-mysql" scheme="https://wang-yulong.github.io/tags/mysql/"/>
+      <category term="---mysql" scheme="https://wang-yulong.github.io/tags/mysql/"/>
     
   </entry>
   
