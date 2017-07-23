@@ -823,7 +823,11 @@ explicit_defaults_for_timestamp=true
 <li><p>修改初始密码 </p>
 <p> step 1: SET PASSWORD = PASSWORD(‘your new password’);//初始化密码</p>
 <p> step 2: ALTER USER ‘root’@’localhost’ PASSWORD EXPIRE NEVER;//设置密码用不过期</p>
-<p> step 3: flush privileges;//设置用户或更改密码后需用flush privileges刷新MySQL的系统权限相关表，否则会出现拒绝访问，还有一种方法，就是重新启动mysql服务器，来使新设置生效。­</p>
+<p> step 3: flush privileges;//设置用户或更改密码后需用flush privileges刷新MySQL的系统权限相关表，否则会出现拒绝访问，还有一种方法，就是重新启动mysql服务器，来使新设置生效。<br>­</p>
+</li>
+<li><p>附加（可选）</p>
+<p> **可以配置 MySQL_HOME=”你的安装路径”  Path 添加 %MySQL_HOME%/bin;</p>
+<p> 好处是启动mysql服务的时候（net start mysql）不用在 cd ..切到到mysql目录了**</p>
 </li>
 </ol>
 <p>##4:常见问题<br>     (1) mysqld -install 结果Install/Remove of the Service Denied!<br>         解决方案：进入 C:\Window\System32  找到CMD.EXE 右键选择 以管理员身份 进行，再进入相应目录执行命令，一切就OK了。<br>     (2)执行报错 应用程序无法正常启动（0x000007b） 如图</p>
