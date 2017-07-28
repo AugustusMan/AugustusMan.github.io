@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wang-yulong.github.io/"/>
-  <updated>2017-07-12T16:47:13.392Z</updated>
+  <updated>2017-07-28T05:25:41.939Z</updated>
   <id>https://wang-yulong.github.io/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&#39;微信开发报错记录&#39;</title>
+    <link href="https://wang-yulong.github.io/2017/07/28/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E6%8A%A5%E9%94%99%E8%AE%B0%E5%BD%95/"/>
+    <id>https://wang-yulong.github.io/2017/07/28/微信开发报错记录/</id>
+    <published>2017-07-28T05:25:41.000Z</published>
+    <updated>2017-07-28T05:25:41.939Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>&#39;struts2导入源文件&#39;</title>
@@ -417,7 +431,7 @@ explicit_defaults_for_timestamp=true
     <link href="https://wang-yulong.github.io/2017/06/20/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>https://wang-yulong.github.io/2017/06/20/微信开发遇到的问题/</id>
     <published>2017-06-20T12:22:54.000Z</published>
-    <updated>2017-07-12T16:33:40.772Z</updated>
+    <updated>2017-07-28T05:29:59.765Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1：回复消息老是提示”该公众号暂时无法提供服务，请稍后再试”"><a href="#1：回复消息老是提示”该公众号暂时无法提供服务，请稍后再试”" class="headerlink" title="1：回复消息老是提示”该公众号暂时无法提供服务，请稍后再试”"></a>1：回复消息老是提示”该公众号暂时无法提供服务，请稍后再试”</h2><pre><code>查了好久，发现并不是网上说的返回值为空的为题，而是web.xml中
 servelt的映射路径写错了。。如图所示
@@ -431,6 +445,8 @@ servelt的映射路径写错了。。如图所示
 <p><img src="/img/weixin2.png" alt="图片"></p>
 <p>此时在微信公众平台进行填入上面红色框内的内容，进行重新映射</p>
 <p><img src="/img/weixin3.png" alt="图片"></p>
+<h2 id="3：-换台电脑发现-老是报错”invalid-openId”"><a href="#3：-换台电脑发现-老是报错”invalid-openId”" class="headerlink" title="3： 换台电脑发现  老是报错”invalid openId”"></a>3： 换台电脑发现  老是报错”invalid openId”</h2><pre><code>借鉴  http://blog.csdn.net/xcrow/article/details/37731719
+</code></pre><p><img src="/img/weixin4.png" alt="图片">    </p>
 ]]></content>
     
     <summary type="html">
@@ -1124,7 +1140,7 @@ static void Main(String []args)
 <h3 id="参考式"><a href="#参考式" class="headerlink" title="参考式"></a>参考式</h3><p>我经常去的几个网站<a href="http://www.baidu.com" title="Baidu" target="_blank" rel="external">百度</a>、<a href="http://www.leanote.com" title="Leanote" target="_blank" rel="external">Leanote</a>以及<a href="http://http://blog.leanote.com/freewalk" title="梵居闹市" target="_blank" rel="external">自己的博客</a><br><a href="http://www.leanote.com" title="Leanote" target="_blank" rel="external">Leanote 笔记</a>是一个不错的<a href="http://http://blog.leanote.com/freewalk" target="_blank" rel="external">网站</a>。</p>
 <h3 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h3><p>See my <a href="/about/">About</a> page for details</p>
 <h3 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h3><p><a href="http://example.com/" target="_blank" rel="external">http://example.com/</a></p>
-<p><a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x61;&#100;&#100;&#114;&#x65;&#115;&#115;&#x40;&#49;&#x34;&#50;&#x35;&#50;&#50;&#54;&#x34;&#x36;&#54;&#x40;&#113;&#x71;&#x2e;&#x63;&#x6f;&#109;">&#x61;&#100;&#100;&#114;&#x65;&#115;&#115;&#x40;&#49;&#x34;&#50;&#x35;&#50;&#50;&#54;&#x34;&#x36;&#54;&#x40;&#113;&#x71;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<p><a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#x61;&#100;&#100;&#114;&#101;&#115;&#x73;&#x40;&#49;&#x34;&#50;&#x35;&#50;&#50;&#x36;&#52;&#54;&#x36;&#x40;&#x71;&#113;&#x2e;&#x63;&#111;&#109;">&#x61;&#100;&#100;&#114;&#101;&#115;&#x73;&#x40;&#49;&#x34;&#50;&#x35;&#50;&#50;&#x36;&#52;&#54;&#x36;&#x40;&#x71;&#113;&#x2e;&#x63;&#111;&#109;</a></p>
 <h2 id="锚点-没实现"><a href="#锚点-没实现" class="headerlink" title="锚点(没实现)"></a>锚点(没实现)</h2><p>跳转到<a href="#index">注意事项</a></p>
 <p>Markdown<br>:    轻量级文本标记语言，可以转换成html，pdf等格式（左侧有一个可见的冒号和四个不可见的空格）<br>代码块 2<br>:   这是代码块的定义（左侧有一个可见的冒号和四个不可见的空格）<br>        代码块（左侧有八个不可见的空格）</p>
 <ul>
